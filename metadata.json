@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Gemini App Builder",
+  "description": "An AI-powered application builder that transforms your ideas into structured app concepts using Gemini.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
