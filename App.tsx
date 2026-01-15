@@ -31,7 +31,7 @@ const fileToText = (file: File): Promise<string> => {
 // --- Sub-components ---
 
 const ChatStatusIndicator = () => (
-<<<<<<< HEAD
+ HEAD
   <div className="flex items-start gap-4 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
     <div className="w-10 h-10 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
       <div className="w-2 h-2 bg-blue-500 rounded-full animate-ping"></div>
@@ -79,7 +79,7 @@ const ApkBuildModal = ({
   }, [logs]);
 
   useEffect(() => {
-<<<<<<< HEAD
+ HEAD
     const runBuild = async () => {
       buildInProgress.current = true;
       addLog("Initializing Native Build Pipeline...");
@@ -100,7 +100,7 @@ const ApkBuildModal = ({
       if (!buildInProgress.current) return;
       setProgress(5);
       
-<<<<<<< HEAD
+ HEAD
       addLog("Resolving dependencies from manifest.json...");
       await new Promise(r => setTimeout(r, 800));
       if (!buildInProgress.current) return;
@@ -160,7 +160,7 @@ const ApkBuildModal = ({
         zip.file(file.name, file.content);
       });
 
-<<<<<<< HEAD
+ HEAD
 =======
       const androidFolder = zip.folder("android");
       androidFolder?.file("app/src/main/AndroidManifest.xml", `<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.architect.${concept.appName.toLowerCase().replace(/\s+/g, '')}"><application android:label="${concept.appName}"><activity android:name=".MainActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter></activity></application></manifest>`);
@@ -184,7 +184,7 @@ const ApkBuildModal = ({
     };
 
     runBuild();
-<<<<<<< HEAD
+ HEAD
     return () => { buildInProgress.current = false; };
   }, [concept]);
 
@@ -342,7 +342,7 @@ const MessageBubble: React.FC<{ message: ChatMessage }> = ({ message }) => {
   const isAssistant = message.role === 'assistant';
   const isError = message.text.startsWith('ERROR:');
   return (
-<<<<<<< HEAD
+ HEAD
     <div className={`flex flex-col gap-3 mb-8 ${isAssistant ? 'items-start' : 'items-end'} w-full animate-in slide-in-from-bottom-4 duration-500`}>
       <div className={`max-w-[90%] md:max-w-[80%] px-5 py-4 rounded-3xl ${
         isAssistant 
@@ -394,7 +394,7 @@ const FileExplorer = ({
   onSelectFile, 
   activeFileName, 
   onAddFile, 
-<<<<<<< HEAD
+ HEAD
   onDeleteFile 
 =======
   onDeleteFile, 
@@ -405,7 +405,7 @@ const FileExplorer = ({
   onSelectFile: (name: string) => void, 
   activeFileName: string | null,
   onAddFile: (isFolder: boolean) => void,
-<<<<<<< HEAD
+ HEAD
   onDeleteFile: (name: string) => void
 }) => {
   return (
@@ -509,7 +509,7 @@ const CodeViewer = ({ file, onContentChange }: { file: AppFile, onContentChange:
     onContentChange(file.name, newVal);
   };
   return (
-<<<<<<< HEAD
+ HEAD
     <div className="w-full h-full flex flex-col bg-[#09090b] rounded-2xl border border-zinc-800 overflow-hidden ring-1 ring-white/5 shadow-2xl">
       <div className="px-5 py-3 border-b border-zinc-800 bg-zinc-900/50 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -530,7 +530,7 @@ const CodeViewer = ({ file, onContentChange }: { file: AppFile, onContentChange:
       <textarea
         value={localContent}
         onChange={handleChange}
-<<<<<<< HEAD
+ HEAD
         className="flex-1 w-full p-6 bg-transparent text-blue-300 font-mono text-xs leading-relaxed resize-none outline-none custom-scrollbar"
 =======
         className="flex-1 w-full p-8 bg-transparent text-emerald-400/90 font-mono text-[13px] leading-relaxed resize-none outline-none focus:ring-0 border-none custom-scrollbar"
@@ -555,7 +555,7 @@ const PreviewFrame = ({ code, deviceType }: { code: string, deviceType: DeviceTy
   }, [deviceType]);
 
   return (
-<<<<<<< HEAD
+ HEAD
     <div className="flex flex-col items-center w-full h-full animate-in fade-in duration-700">
       <div 
         className="h-full rounded-3xl overflow-hidden bg-white shadow-2xl border-[12px] border-zinc-900 relative transition-all duration-500 ease-out flex-1"
@@ -575,7 +575,7 @@ const PreviewFrame = ({ code, deviceType }: { code: string, deviceType: DeviceTy
   );
 };
 
-<<<<<<< HEAD
+ HEAD
 =======
 const VersionSidebar = ({ history, onClose, onRestore, currentVersionId }: { history: AppVersion[], onClose: () => void, onRestore: (version: AppVersion) => void, currentVersionId: string | null }) => {
   return (
@@ -747,7 +747,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'chat' | 'preview' | 'code'>('chat');
   const [deviceType, setDeviceType] = useState<DeviceType>('desktop');
   const [selectedFileName, setSelectedFileName] = useState<string | null>(null);
-<<<<<<< HEAD
+ HEAD
   const [showApkModal, setShowApkModal] = useState(false);
 =======
   const [showGithubModal, setShowGithubModal] = useState(false);
@@ -776,7 +776,7 @@ export default function App() {
     localStorage.setItem('architect_projects', JSON.stringify(projects));
   }, [projects]);
 
-<<<<<<< HEAD
+ HEAD
   useEffect(() => {
     if (activeTab === 'chat') {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -825,7 +825,7 @@ export default function App() {
     });
     setPrompt('');
     setActiveTab('chat');
-<<<<<<< HEAD
+ HEAD
 =======
     if (window.innerWidth < 768) setIsSidebarOpen(false);
 >>>>>>> f2885e6 (feat: initial app builder setup with auto-deploy)
@@ -844,7 +844,7 @@ export default function App() {
       historyIndex: project.historyIndex || 0
     });
     setPrompt('');
-<<<<<<< HEAD
+ HEAD
     if (project.concept && project.concept.files.length > 0) {
       setSelectedFileName(project.concept.files[0].name);
     }
@@ -1157,7 +1157,7 @@ export default function App() {
     }
   };
 
-<<<<<<< HEAD
+ HEAD
   return (
     <div className="h-screen w-screen bg-[#09090b] flex overflow-hidden">
       {/* Sidebar */}
@@ -1350,7 +1350,7 @@ export default function App() {
                   </div>
                 </div>
               ) : (
-<<<<<<< HEAD
+ HEAD
                 <div className="space-y-4">
                   {state.messages.map((m, i) => <MessageBubble key={i} message={m} />)}
 =======
@@ -1365,7 +1365,7 @@ export default function App() {
           )}
 
           {activeTab === 'code' && state.concept && (
-<<<<<<< HEAD
+ HEAD
             <div className="h-[calc(100vh-200px)] flex gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="w-64 shrink-0">
                 <FileExplorer 
@@ -1424,7 +1424,7 @@ export default function App() {
           )}
 
           {activeTab === 'preview' && state.concept && (
-<<<<<<< HEAD
+ HEAD
             <div className="h-[calc(100vh-200px)] flex flex-col items-center gap-6 animate-in fade-in duration-500">
                <div className="flex p-1 bg-zinc-900 rounded-xl border border-zinc-800 shadow-lg">
 =======
@@ -1439,7 +1439,7 @@ export default function App() {
                   <button 
                     key={d.type} 
                     onClick={() => setDeviceType(d.type as DeviceType)} 
-<<<<<<< HEAD
+ HEAD
                     className={`p-2 rounded-lg transition-all ${deviceType === d.type ? 'bg-zinc-800 text-white' : 'text-zinc-500 hover:text-zinc-300'}`}
                   >
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d={d.icon} strokeWidth={2} /></svg>
@@ -1456,7 +1456,7 @@ export default function App() {
           )}
         </main>
 
-<<<<<<< HEAD
+ HEAD
         {/* Input Bar */}
         <div className="p-8 pt-0 shrink-0">
           <div className="max-w-3xl mx-auto">
