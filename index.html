@@ -4,54 +4,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-    <title>Architect | AI App Builder</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg-color: #09090b;
-        --sidebar-color: #121214;
-        --border-color: #27272a;
-        --accent-color: #3b82f6;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: var(--bg-color);
-        color: #f4f4f5;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      .gemini-gradient {
-        background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #3f3f46;
-        border-radius: 10px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #52525b;
-      }
-      @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0px); }
-      }
-      .floating {
-        animation: float 6s ease-in-out infinite;
-=======
     <title>Gemini App Builder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +38,6 @@
       }
       .device-preview-transition {
         transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
->>>>>>> f2885e6 (feat: initial app builder setup with auto-deploy)
       }
     </style>
     <script>
@@ -95,25 +46,15 @@
 <script type="importmap">
 {
   "imports": {
-<<<<<<< HEAD
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
-    "jszip": "https://esm.sh/jszip@^3.10.1",
-    "vite": "https://esm.sh/vite@^7.3.1"
-=======
     "vite": "https://esm.sh/vite@^7.3.1",
     "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
     "jszip": "https://esm.sh/jszip@^3.10.1"
->>>>>>> f2885e6 (feat: initial app builder setup with auto-deploy)
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
