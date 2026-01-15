@@ -8,7 +8,7 @@ export const generateAppConcept = async (
   currentConcept: AppConcept | null
 ): Promise<{ concept: AppConcept; thought: string }> => {
   // FIX: Create a new GoogleGenAI instance inside the function to ensure up-to-date API key usage.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.AIzaSyDR9krpZNzrT9M9DiEhuBMaLs18WDFME8A });
   
   const conversationContext = history.map(m => `${m.role.toUpperCase()}: ${m.text}`).join('\n');
   const filesContext = currentConcept 
