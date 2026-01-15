@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # We explicitly do NOT use cache: 'npm' here to avoid the "lock file not found" error
 
       - name: Install dependencies
         run: npm install

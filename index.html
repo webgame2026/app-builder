@@ -4,65 +4,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gemini App Builder</title>
+    <title>Architect | AI App Builder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
+      :root {
+        --bg-color: #09090b;
+        --sidebar-color: #121214;
+        --border-color: #27272a;
+        --accent-color: #3b82f6;
+      }
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #131314;
-        color: #e3e3e3;
+        background-color: var(--bg-color);
+        color: #f4f4f5;
         margin: 0;
         padding: 0;
+        overflow: hidden;
       }
       .gemini-gradient {
-        background: linear-gradient(70deg, #4285f4, #9b72cb, #d96570);
+        background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      .input-card {
-        background-color: #1e1f20;
-        border: 1px solid #3c4043;
-      }
       .custom-scrollbar::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
+        height: 6px;
       }
       .custom-scrollbar::-webkit-scrollbar-track {
-        background: #1e1f20;
+        background: transparent;
       }
       .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #3c4043;
-        border-radius: 4px;
+        background: #3f3f46;
+        border-radius: 10px;
       }
-      .device-preview-transition {
-        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #52525b;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      .floating {
+        animation: float 6s ease-in-out infinite;
       }
     </style>
-    <!-- Shim for process.env to prevent ReferenceErrors in browser-only environments -->
     <script>
       window.process = window.process || { env: {} };
     </script>
-    <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
     "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
-    "jszip": "https://esm.sh/jszip@3.10.1",
-    "diff": "https://esm.sh/diff@5.2.0",
+    "jszip": "https://esm.sh/jszip@^3.10.1",
     "vite": "https://esm.sh/vite@^7.3.1"
   }
 }
 </script>
-    <!-- Explicitly load the main entry point as a module -->
-    <script type="module" src="./index.tsx"></script>
 <link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
