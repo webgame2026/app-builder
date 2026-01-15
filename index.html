@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>Architect | AI App Builder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +51,42 @@
       }
       .floating {
         animation: float 6s ease-in-out infinite;
+=======
+    <title>Gemini App Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #131314;
+        color: #e3e3e3;
+        margin: 0;
+        padding: 0;
+      }
+      .gemini-gradient {
+        background: linear-gradient(70deg, #4285f4, #9b72cb, #d96570);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .input-card {
+        background-color: #1e1f20;
+        border: 1px solid #3c4043;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1e1f20;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #3c4043;
+        border-radius: 4px;
+      }
+      .device-preview-transition {
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+>>>>>>> f2885e6 (feat: initial app builder setup with auto-deploy)
       }
     </style>
     <script>
@@ -58,12 +95,21 @@
 <script type="importmap">
 {
   "imports": {
+<<<<<<< HEAD
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
     "jszip": "https://esm.sh/jszip@^3.10.1",
     "vite": "https://esm.sh/vite@^7.3.1"
+=======
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "jszip": "https://esm.sh/jszip@^3.10.1"
+>>>>>>> f2885e6 (feat: initial app builder setup with auto-deploy)
   }
 }
 </script>
