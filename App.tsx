@@ -170,7 +170,7 @@ const ApkBuildModal = ({
       const url = URL.createObjectURL(content);
       const a = document.createElement('a');
       a.href = url;
-<<<<<<< HEAD
+ HEAD
       a.download = `${concept.appName.toLowerCase().replace(/\s+/g, '-')}_native_bundle.zip`;
 =======
       a.download = `${concept.appName.toLowerCase().replace(/\s+/g, '-')}_android_v1.zip`;
